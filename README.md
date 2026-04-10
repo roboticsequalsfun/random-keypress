@@ -30,7 +30,6 @@ Ctrl + Alt + P → Pause / Resume (for when chaos needs a break)
 This project is licensed under the MIT License.
 
 Which means you can:
-
 Use it
 Modify it
 Share it
