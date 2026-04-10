@@ -22,7 +22,7 @@ Randomly press keys
 Generally make you question your life choices
 
 ## Controls (yes, you can escape)
-Esc → Emergency stop before things get worse
+Esc → Emergency stop before things get worse  
 Ctrl + Alt + P → Pause / Resume (for when chaos needs a break)
 
 ## License
