@@ -15,10 +15,10 @@ Double-click the .exe.
 A popup will appear and tell you what’s about to happen.
 Press OK and accept your fate.
 
-The program will now:
+The program will now:  
 
-Randomly click your mouse
-Randomly press keys
+Randomly click your mouse  
+Randomly press keys  
 Generally make you question your life choices
 
 ## Controls (yes, you can escape)
@@ -29,11 +29,11 @@ Ctrl + Alt + P → Pause / Resume (for when chaos needs a break)
 
 This project is licensed under the MIT License.
 
-Which means you can:
-Use it
-Modify it
-Share it
-Prank your friends with it (highly encouraged)
+Which means you can:  
+Use it  
+Modify it  
+Share it  
+Prank your friends with it (highly encouraged)  
 
 There is no warranty.
 
