@@ -9,7 +9,6 @@ Is it a virus? Also no.
 It acts like one, but don’t worry—it doesn’t steal your data, destroy your system, or contact mysterious servers in the void.
 (You can check the code if you don’t trust me. I would.)
 
---- 
 ## How to Use
 Clone the project (or download it like a normal human).
 Double-click the .exe.
