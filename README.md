@@ -2,9 +2,9 @@
 This incredibly advanced piece of software does one thing:
 it randomly smashes your keyboard (and clicks like a maniac).
 
-Is it useful? No.
-Is it chaotic? Yes.
-Is it a virus? Also no.
+Is it useful? No.  
+Is it chaotic? Yes.  
+Is it a virus? Also no.  
 
 It acts like one, but don’t worry—it doesn’t steal your data, destroy your system, or contact mysterious servers in the void.
 (You can check the code if you don’t trust me. I would.)
