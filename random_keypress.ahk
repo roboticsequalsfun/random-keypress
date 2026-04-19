@@ -35,20 +35,21 @@ while True
         else
             MsgBox "Pausing random key presses."
     }
+    if RandomKeyPress {
+        ; Randomly decide whether to press a combo or a single key
+        if (Random(0, 1) < weight)
+        {
+            ; Press a random combo
+            special := specials[Random(1, specials.Length)]
+            Send(special)
+        }
+        else
+        {
+            ; Press a random single key
+            key := keys[Random(1, keys.Length)]
+            Send(key)
+        }
 
-    ; Randomly decide whether to press a combo or a single key
-    if (Random(0, 1) < weight)
-    {
-        ; Press a random combo
-        special := specials[Random(1, specials.Length)]
-        Send(special)
+        Sleep(delay)
     }
-    else
-    {
-        ; Press a random single key
-        key := keys[Random(1, keys.Length)]
-        Send(key)
-    }
-
-    Sleep(delay)
 }
