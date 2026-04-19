@@ -1,14 +1,15 @@
 ﻿#Requires AutoHotkey v2.0
 #Include config.ahk
 
-
 MsgBox "Random key press has started. Press ESC to stop. Press Ctrl + P to pause/resume."
 
-RandomKeyPress := true
-specials := Config.specials
+global running := true
+specials := KeyConfig.specials
 
-letters := Config.letters
-symbols := Config.symbols
+letters := KeyConfig.letters
+symbols := KeyConfig.symbols
+weight := KeyConfig.specialWeight
+delay := KeyConfig.pressDelay
 
 keys := []
 for i, v in letters
@@ -18,24 +19,28 @@ for i, v in symbols
     keys.Push(v)
 
 
-weight := Config.specialWeight
-delay := Config.pressDelay
+mouse := MouseConfig.mouse
+speed := MouseConfig.speed
+buttons := MouseConfig.buttons
+maxClick := MouseConfig.maxClick
 
 while True
 {
+    global running
     Esc::{
         MsgBox "Exiting Program..."
         ExitApp
     }
     ^p::
     {
-        RandomKeyPress := !RandomKeyPress
-        if RandomKeyPress
+        global running
+        running := !running
+        if running
             MsgBox "Resuming random key presses."
         else
             MsgBox "Pausing random key presses."
     }
-    if RandomKeyPress {
+    if running {
         ; Randomly decide whether to press a combo or a single key
         if (Random(0, 1) < weight)
         {
@@ -51,5 +56,10 @@ while True
         }
 
         Sleep(delay)
+    }
+    if mouse {
+        button := buttons[Random(1, buttons.Length)]
+        clickTimes := Random(1, maxClick)
+        MouseClick(button, speed)
     }
 }
