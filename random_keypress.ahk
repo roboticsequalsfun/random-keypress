@@ -1,63 +1,54 @@
 ﻿#Requires AutoHotkey v2.0
-#SingleInstance Force
-SendMode("Input")
-CoordMode("Mouse", "Screen")
+#Include config.ahk
 
-MsgBox("Script started.`nPress ESC to stop.`nPress Ctrl+Alt+P to pause/resume.")
 
-paused := false
+MsgBox "Random key press has started. Press ESC to stop. Press Ctrl + P to pause/resume."
 
-^!p::paused := !paused
-Esc::ExitApp()
+RandomKeyPress := true
+specials := Config.specials
 
-; Build key pool
-keys := ["{Shift}", "{Enter}", "{Tab}", "{Ctrl}", "{Backspace}", " "]
+letters := Config.letters
+symbols := Config.symbols
 
-; Add lowercase a-z multiple times (to increase probability)
-Loop 26
+keys := []
+for i, v in letters
+    keys.Push(v)
+
+for i, v in symbols
+    keys.Push(v)
+
+
+weight := Config.specialWeight
+delay := Config.pressDelay
+
+while True
 {
-    letter := Chr(96 + A_Index)  ; a-z
-    keys.Push(letter)
-    keys.Push(letter)
-}
-
-; Add A-Z once (less likely)
-Loop 26
-    keys.Push(Chr(64 + A_Index))  ; A-Z
-
-; Add 0–9
-Loop 10
-    keys.Push(A_Index - 1)
-
-; Add symbols
-symbols := "!@#$%^&*()-_=+[]{};:',.<>/?\\|~"
-Loop Parse symbols
-    keys.Push(A_LoopField)
-
-Loop
-{
-    if paused {
-        Sleep(100)
-        continue
+    Esc::{
+        MsgBox "Exiting Program..."
+        ExitApp
+    }
+    ^p::
+    {
+        RandomKeyPress := !RandomKeyPress
+        if RandomKeyPress
+            MsgBox "Resuming random key presses."
+        else
+            MsgBox "Pausing random key presses."
     }
 
-    ; Move mouse to a random screen location
-    screenW := SysGet(78)
-    screenH := SysGet(79)
-    x := Random(0, screenW)
-    y := Random(0, screenH)
-    MouseMove(x, y, 0)
-
-    ; Choose random action
-    action := Random(1, 3)
-
-    if action = 1 {
+    ; Randomly decide whether to press a combo or a single key
+    if (Random(0, 1) < weight)
+    {
+        ; Press a random combo
+        special := specials[Random(1, specials.Length)]
+        Send(special)
+    }
+    else
+    {
+        ; Press a random single key
         key := keys[Random(1, keys.Length)]
         Send(key)
     }
-    else if action = 2 {
-        Click()
-    }
 
-    Sleep(200)
+    Sleep(delay)
 }
