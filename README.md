@@ -1,4 +1,4 @@
-## Random Keypress
+## ⌨️ Random Keypress
 This incredibly advanced piece of software does one thing:
 it randomly smashes your keyboard (and clicks like a maniac).
 
@@ -9,7 +9,7 @@ Is it a virus? Also no.
 It acts like one, but don’t worry—it doesn’t steal your data, destroy your system, or contact mysterious servers in the void.
 (You can check the code if you don’t trust me. I would.)
 
-## How to Use
+## 🛠️ How to Use
 Clone the project (or [download](https://github.com/RoboticsEqualsFun/random-keypress/releases/tag/2.0.0) it like a normal human).
 Double-click the .exe.
 A popup will appear and tell you what’s about to happen.
@@ -25,7 +25,7 @@ Generally make you question your life choices
 Esc → Emergency stop before things get worse  
 Ctrl + Alt + P → Pause / Resume (for when chaos needs a break)
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License.
 
