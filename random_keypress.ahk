@@ -4,6 +4,7 @@
 global running := true
 global TotalWidth := SysGet(78)
 global TotalHeight := SysGet(79)
+global pastAction := 0
 
 delay := Number(IniRead("config.ini", "Config", "pressDelay"))
 keyWeight := Number(IniRead("config.ini", "Config", "keyWeight"))
@@ -54,8 +55,9 @@ MsgBox "Random Keypress has started. Press ESC to stop. Press Ctrl + P to pause/
 while True
 {
     if running {
+        value := Random(0, 1)
         ; Randomly decide to press a key or mouse based on the weight
-        if (Random(0, 1) > weight){
+        if (value > weight){
             ; Randomly decide whether to press a single or special key
             if (Random(0, 1) > keyWeight)
             {
@@ -65,6 +67,10 @@ while True
             }
             else
             {
+                if (pastAction < weight) {
+                    Send("{Enter}")
+                    continue
+                }
                 ; Press a random single key
                 key := keys[Random(1, keys.Length)]
                 Send(key)
@@ -72,6 +78,10 @@ while True
         }
         else {
             if mouse {
+                if (pastAction < weight) {
+                    Send("{Enter}")
+                    continue
+                }
                 ; Randomly choose which button to press
                 button := buttons[Random(1, buttons.Length)]
                 ; Get a random posistion
@@ -86,6 +96,7 @@ while True
     }
 
     ; Delay for allowing AHK to check for hotkeys, and for user expierence
+    global pastAction := value
     Sleep(delay)
 }
 

@@ -1,20 +1,20 @@
 [Setup]
 AppName=Random Keypress
-AppVersion=2.0.0
+AppVersion=2.1.0
 AppPublisher=RoboticsEqualsFun
-AppId={A1B2C3D4-E5F6-7890-ABCD-1234567890EF}
+AppId={{A1B2C3D4-E5F6-7890-ABCD-1234567890EF}}
 AppPublisherURL=https://github.com/roboticsequalsfun/random-keypress
 DefaultDirName={autopf}\Random Keypress
 PrivilegesRequiredOverridesAllowed=dialog
 DefaultGroupName=Random Keypress
-OutputBaseFilename=randomkeypress-2.0.0-installer
+OutputBaseFilename=randomkeypress-2.1.0-installer
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 CloseApplications=yes
 
 [Files]
-Source: "Random Keypress.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "RandomKeypress.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "config.ini"; DestDir: "{app}"; Flags: ignoreversion
 Source: "icon.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion;
