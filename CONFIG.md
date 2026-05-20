@@ -116,7 +116,7 @@ Follow these rules carefully when modifying the config.
 ### ❌ Do NOT
 1. Change variable names
 2. Change section/header names
-3. Add new variables
+3. Add new variables (except in lists)
 4. Add new sections/headers
 
 ### ✅ Do
