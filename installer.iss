@@ -7,7 +7,7 @@ AppPublisherURL=https://github.com/roboticsequalsfun/random-keypress
 DefaultDirName={autopf}\Random Keypress
 PrivilegesRequiredOverridesAllowed=dialog
 DefaultGroupName=Random Keypress
-OutputBaseFilename=randomkeypress-installer
+OutputBaseFilename=RandomKeypress-v2.1.0-Installer
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -17,18 +17,18 @@ CloseApplications=yes
 Source: "RandomKeypress.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "config.ini"; DestDir: "{app}"; Flags: ignoreversion
 Source: "icon.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion;
-Source: "LICENSE"; DestDir: "{app}"; Flags: ignoreversion;
+Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion
+Source: "LICENSE"; DestDir: "{app}"; Flags: ignoreversion
 
 [Tasks]
 Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional shortcuts:"
 
 [Icons]
-Name: "{group}\Random Keypress"; Filename: "{app}\Random Keypress.exe"; IconFilename: "{app}\icon.ico"
-Name: "{userdesktop}\Random Keypress"; Filename: "{app}\Random Keypress.exe"; IconFilename: "{app}\icon.ico"; Tasks: desktopicon
+Name: "{group}\Random Keypress"; Filename: "{app}\RandomKeypress.exe"; IconFilename: "{app}\icon.ico"
+Name: "{userdesktop}\Random Keypress"; Filename: "{app}\RandomKeypress.exe"; IconFilename: "{app}\icon.ico"; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\Random Keypress.exe"; Description: "Launch Random Keypress after installation"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\RandomKeypress.exe"; Description: "Launch Random Keypress after installation"; Flags: nowait postinstall skipifsilent
 
 [InstallDelete]
 Type: dirifempty; Name: "{app}"
