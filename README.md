@@ -1,6 +1,6 @@
 ## ⌨️ Random Keypress
 This incredibly advanced piece of software does one thing:
-it randomly smashes your keyboard (and clicks like a maniac).
+it randomly smashes your keyboard and mouse.
 
 Is it useful? No.  
 Is it chaotic? Yes.  
@@ -12,7 +12,7 @@ It acts like one, but don’t worry—it doesn’t steal your data, destroy your
 ## 🛠️ How to Use
 Clone the project (or [download](https://github.com/RoboticsEqualsFun/random-keypress/releases/latest) it like a normal human).
 Follow the instructions in the installer
-Double-click the .exe.
+Double-click the .exe. (do I really need to explain how to do that?)
 A popup will appear and tell you what’s about to happen.
 Press OK and accept your fate.
 
@@ -58,5 +58,7 @@ Prank your friends with it (highly encouraged)
 
 There is no warranty.
 
-Not because of legal reasons...
-but because there is literally nothing here worth warranting.
+And I _do not_ claim any responsibility for your poor descisions. 
+
+If you set it off when your organizing your pictures, working on your book, or during a meeting that is completely your fault.
+I mean what did you expect?
