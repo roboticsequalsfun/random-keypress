@@ -63,7 +63,7 @@ Example:
 
 Controls how fast the mouse moves.
 
-⚠️ This value is **inverted:**
+⚠️ This value is **inverted:** (Again intend to fix. I'm a single dev maintaining this tiny prank program, expect a year or so okay?)
 
 - `1` → instant teleport
 - Higher numbers → slower movement
