@@ -22,7 +22,7 @@ Time between each key press or mouse click (in milliseconds).
 
 **⚠️ Important:**
 - Must be greater than `0`
-- If set to `0` or lower, the program may stop working or crash
+- If set to `0` or lower, the program may stop working or crash your computer (Yah I intend to fix that)
 ---
 
 🔹 `weight`
